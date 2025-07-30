@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Django Project - Personal Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+</head>
+<body>
+    <header>
+        <h1>Cristina Neacsu</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'subscribe' %}">Newsletter</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        &copy; Nice footer text
+    </footer>
+</body>
+</html>
